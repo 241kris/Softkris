@@ -4,11 +4,11 @@ import Image from 'next/image'
 export default function Footer() {
     return (
         <>
-            <footer className="footer sm:footer-horizontal  text-neutral-content p-10">
+            <footer className="footer sm:footer-horizontal  text-neutral-content p-2">
                 <aside>
                     <Image src="/barcode.gif" width={50} height={50} alt="Logo" />
                     <p className='text-start'>
-                        Copyright © 2025 Nehoko LLC
+                        Copyright © 2025 Softkris LLC
                         <br />
                         Tous droits réservés.
                     </p>
@@ -20,10 +20,10 @@ export default function Footer() {
                             +241 077001355
                         </a>
                         <a href="tel:+241076309060" className="hover:underline hover:text-[#40fa7e] transition">
-                            +241 076309060
+                            +241 065748577
                         </a>
                         <a href="mailto:contact@nehoko.com" className="hover:underline hover:text-[#40fa7e] transition">
-                            contact@nehoko.com
+                            styvenekris@gmail.com
                         </a>
                     </div>
 

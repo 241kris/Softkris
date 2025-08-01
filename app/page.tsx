@@ -1,43 +1,19 @@
 'use client'
 
 import React from 'react'
-import ChromaGrid from './components/ChromaGrid'
-import Image from 'next/image'
+import { FaReact, FaLaravel, FaGithub, FaInstagramSquare } from 'react-icons/fa';
+import { SiNextdotjs } from 'react-icons/si';
 import TrueFocus from './components/TrueFocus'
 
 //icone import react icone
 import { FaLinkedin } from "react-icons/fa6";
-import { AiFillTikTok } from "react-icons/ai";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaMagic, FaGlobe, FaRocket } from 'react-icons/fa';
 import Navbar from './components/Navbar'
 import Project from './components/Project'
 import Footer from './components/Footer'
 import Squares from './components/Squares'
+import Link from 'next/link';
 
 export default function Page() {
-
-  const items = [
-    {
-      image: "/user3.png",
-      title: "Kris Styvene",
-      subtitle: "Full-stack Developer",
-      handle: "@kris-styvene",
-      borderColor: "#3B82F6",
-      gradient: "linear-gradient(145deg, #3B82F6, #000)",
-      url: "https://github.com/241kris"
-    },
-    {
-      image: "/user1.jpg",
-      title: "Thomas Dakin",
-      subtitle: "Marketing digital",
-      handle: "@Thomas",
-      borderColor: "#10B981",
-      gradient: "linear-gradient(180deg, #10B981, #000)",
-      url: "https://www.linkedin.com/in/thomas-daquin-2363a7359?trk=contact-info"
-    }
-  ]
-
 
   return (
     <>
@@ -57,39 +33,36 @@ export default function Page() {
         <div className="relative z-10">
           <Navbar />
           <div className="flex flex-col items-center justify-center mb-7 pt-10">
-            <Image src="/logo.png" width={300} height={300} alt="Logo" />
-            <span className="font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#40fa7e] via-[#2db5ff] to-[#7c3aed] text-4xl mt-4">
-              Co-createur de l&apos;avenir numerique
+            <h1 className='text-7xl font-extrabold text-white'>SoftKris</h1>
+            <span className="font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#40fa7e] via-[#2db5ff] to-[#7c3aed] text-3xl mt-4">
+              Developpeur web full stack | solo entrepreneur
             </span>
             <div className='my-5'>
-              <h1 className='text-base text-center link mb-2'>retrouvez nous</h1>
-              <div className='flex items-center gap-3 text-4xl justify-center '>
-                <FaLinkedin />
-                <AiFillTikTok />
-                <FaFacebookSquare />
+              <h1 className='text-base text-center  font-bold mb-2'>Follow me</h1>
+              <div className='flex items-center gap-3 text-3xl justify-center '>             
+                
+                <Link href='https://www.linkedin.com/in/kris-styvene-492941374/'> <FaLinkedin /></Link>
+                <Link href='https://github.com/241kris'><FaGithub /></Link>
+                <FaInstagramSquare />
               </div>
             </div>
 
-            <div className="my-10">
-              <h1 className="text-base mb-6 text-start">Nos actions</h1>
-              <ul className="space-y-6">
-                <li className="flex items-center space-x-4 ">
-                  <FaMagic className="text-[#40fa7e] text-sm" />
-                  <span className="text-sm link">
-                    Construction de solution digital
-                  </span>
+
+            <div className="my-7  ">
+              <h1 className="text-xl mb-6 text-start font-extrabold  text-gray-400 ms-4">My roadmap</h1>
+
+              <ul className="flex flex-row items-center space-x-10 px-3">
+                <li className="flex items-center space-x-2">
+                  <FaReact className="text-[#61DBFB] md:text-3xl text-xl  animate-spin-slow" />
+                  <span className="text-xl font-extrabold link">React.js</span>
                 </li>
-                <li className="flex items-center space-x-4 ">
-                  <FaGlobe className="text-[#40fa7e] text-sm" />
-                  <span className="text-sm link">
-                    sites web (e-commerce, blog, vitrine)
-                  </span>
+                <li className="flex items-center space-x-2">
+                  <SiNextdotjs className="text-white md:text-3xl text-xl animate-pulse-glow" />
+                  <span className="text-xl font-extrabold link">Next.js</span>
                 </li>
-                <li className="flex items-center space-x-4 ">
-                  <FaRocket className="text-[#40fa7e] text-sm" />
-                  <span className="text-sm link">
-                    Accompagnement dans vos projets numériques
-                  </span>
+                <li className="flex items-center space-x-2">
+                  <FaLaravel className="text-[#f9322c] md:text-3xl text-xl  animate-bounce-smooth" />
+                  <span className="text-xl font-extrabold link">Laravel</span>
                 </li>
               </ul>
             </div>
@@ -98,23 +71,17 @@ export default function Page() {
 
         <div className="flex flex-col justify-start items-center mt-24">
           <TrueFocus
-            sentence="Team Nehoko"
+            sentence="who am i ?"
             manualMode={false}
             blurAmount={5}
             borderColor="blue"
             animationDuration={1.5}
             pauseBetweenAnimations={1}
           />
-
-          <div className="relative mt-5 mb-14">
-            <ChromaGrid
-              items={items}
-              radius={300}
-              damping={0.45}
-              fadeOut={0.6}
-              ease="power3.out"
-            />
+          <div className='md:w-1/3 w-full z-10 mw-auto text-justify mt-8 text-lg  font-light'>
+            Développeur Web Full-Stack <span className='text-green-400'>autodidacte depuis 3 ans </span>| 🚀 Entrepreneur passionné d’autoformation — Débrouillard, Adaptatif, <span className='text-green-400'>Orienté progrès.</span>
           </div>
+
         </div>
 
         <Project />

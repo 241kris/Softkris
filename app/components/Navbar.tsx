@@ -7,7 +7,7 @@ export default function Navbar() {
         < >
             <nav className="block w-full max-w-screen-lg px-4  mx-auto  shadow-2xl rounded-md lg:px-8   mt-10">
                 <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-                    <Image src="/logo.png" width={75} height={75} alt="Logo" />
+                    <Image src="/profil.png" width={80} height={80} alt="Logo" className='rounded-full' />
                     {/*<Link href="/blog" className="badge badge-accent ">Blog</Link>*/}
                 </div>
             </nav>
