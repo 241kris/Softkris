@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
     return (
         <>
-            <footer className="footer sm:footer-horizontal  text-neutral-content p-2">
+            <footer className="footer sm:footer-horizontal  text-neutral-content p-2 py-15">
                 <aside>
                     <Image src="/barcode.gif" width={50} height={50} alt="Logo" />
                     <p className='text-start'>
