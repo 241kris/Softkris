@@ -1,14 +1,23 @@
- 
+
 import React from 'react'
 import Image from 'next/image'
+
 
 export default function Navbar() {
     return (
         < >
-            <nav className="block w-full max-w-screen-lg px-4  mx-auto  shadow-2xl rounded-md lg:px-8   mt-10">
-                <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-                    <Image src="/profil.png" width={80} height={80} alt="Logo" className='rounded-full' />
-                    {/*<Link href="/blog" className="badge badge-accent ">Blog</Link>*/}
+            {/* navbar*/}
+            <nav className="block w-full max-w-screen-lg px-4  mx-auto  shadow-2xl rounded-md lg:px-8 h-50  pt-7">
+                <div className="container flex flex-wrap items-center justify-between mx-auto  ">
+
+                    {/* profil picture*/}
+                    <Image src="/profil.png" width={80} height={80} alt="Logo" className='rounded-xl' />
+
+                    {/* raccourcis link*/}
+                    <div >
+                        <a href="#about-me" className="link text-base ">a propos de moi</a>
+                        <a href="#contact" className="ms-7 link text-base ">Contact</a>
+                    </div>
                 </div>
             </nav>
 

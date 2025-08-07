@@ -8,26 +8,32 @@ export default function Hero() {
     return (
         < >
             {/*hero section*/}
-            <div className="relative z-10">
+            <div className="relative z-10 ">
+
+                {/*import composent navbar*/}
                 <Navbar />
-                <div className="flex flex-col items-center justify-center mb-7 pt-10">
-                    <h1 className='md:text-8xl text-6xl font-extrabold text-white'>SoftKris</h1>
-                    <span className="font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#40fa7e] via-[#2db5ff] to-[#7c3aed] text-3xl mt-4">
+
+                <div className="flex flex-col items-center justify-center mb-7 pt-10 h-130">
+                    
+                    {/*intro*/}
+                    <h1 className='md:text-8xl text-6xl font-extrabold text-gray-300 '> SoftKris</h1>
+                    <span className="font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-br from-[#40fa7e] via-[#2db5ff] to-[#7c3aed] text-2xl mt-4">
                         Developpeur web full stack | solo entrepreneur
                     </span>
+
+                    {/*mes reseaux sociaux*/}
                     <div className='my-5'>
-                        <h1 className='text-base text-center  font-bold mb-2'>Follow me</h1>
                         <div className='flex items-center gap-3 text-3xl justify-center '>
 
-                            <Link href='https://www.linkedin.com/in/kris-styvene-492941374/'> <FaLinkedin /></Link>
+                            <Link href='https://www.linkedin.com/in/kris-styvene-492941374/' className='text-blue-500'> <FaLinkedin /></Link>
                             <Link href='https://github.com/241kris'><FaGithub /></Link>
-                            <FaInstagramSquare />
+                            <FaInstagramSquare className='text-red-200' />
                         </div>
                     </div>
 
-
+                    {/*mes outils de dev*/}
                     <div className="my-7  ">
-                        <h1 className="text-xl mb-6 text-center font-extrabold  text-gray-400 ms-4">Mes technologies</h1>
+                        <h1 className="text-lg mb-6 text-center ms-4  text-gray-200">Mes technologies</h1>
 
                         <ul className="flex flex-row items-center space-x-10 px-3">
                             <li className="flex items-center space-x-2">
@@ -44,6 +50,7 @@ export default function Hero() {
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
 

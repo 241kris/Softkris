@@ -73,6 +73,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
     };
 
     return (
+        
         <div
             className="relative flex gap-4 justify-center items-center flex-wrap"
             ref={containerRef}
@@ -83,7 +84,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
                     <span
                         key={index}
                         ref={(el) => { wordRefs.current[index] = el; }}
-                        className="relative text-[3rem] font-black cursor-pointer  text-white"
+                        className="relative text-[3rem] font-black cursor-pointer  text-gray-300"
                         style={{
                             filter: manualMode
                                 ? isActive
@@ -103,7 +104,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
             })}
 
             <motion.div
-                className="absolute top-0 left-0 pointer-events-none box-border border-0 text-white "
+                className="absolute top-0 left-0 pointer-events-none box-border border-0   "
                 animate={{
                     x: focusRect.x,
                     y: focusRect.y,
