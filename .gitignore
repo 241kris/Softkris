@@ -20,6 +20,9 @@ node_modules/
 /.next/
 /out/
 
+# Ignorer les fichiers générés par Prisma
+app/generated/
+
 # production
 /build
 
